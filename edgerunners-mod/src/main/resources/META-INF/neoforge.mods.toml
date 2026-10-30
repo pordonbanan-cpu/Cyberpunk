@@ -1,0 +1,23 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="edgerunners"
+version="0.3.0"
+displayName="Cyberpunk: Edgerunners"
+description='''Сэндевистан, кибер-скелет Дэвида, киберпсихоз Смэшера, Skippy.'''
+
+[[dependencies.edgerunners]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.edgerunners]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
