@@ -1,26 +1,17 @@
-# Full original ZIP — bit-perfect copy of your edgerunners-mod-v0_3.zip
+# Full original ZIP
 
-## Fastest way (single file)
-```bash
-base64 -d zip_b64/edgerunners-mod-v0_3.zip.b64 > edgerunners-mod-v0_3.zip
-unzip edgerunners-mod-v0_3.zip
-```
+The original `edgerunners-mod-v0_3.zip` (179536 bytes) contains **absolutely everything**:
+- every .java (including full CyberwareScreen.java and SandevistanMesh.java)
+- every texture .png
+- blockbench/preview_sandevistan.png + sandevistan.bbmodel
+- gradle files, langs, models, DEVLOG, README
 
-## Or from numbered parts (if single file not yet complete)
+Parts under `zip_b64/part_*.b64` are being filled. When complete:
+
 ```bash
 cat zip_b64/part_*.b64 | base64 -d > edgerunners-mod-v0_3.zip
+md5sum edgerunners-mod-v0_3.zip   # should match your original
 unzip edgerunners-mod-v0_3.zip
 ```
 
-## Decode texture .b64 files to real PNGs
-```bash
-bash decode_assets.sh
-# or manually:
-for f in edgerunners-mod/src/main/resources/assets/edgerunners/textures/**/*.png.b64; do
-  base64 -d "$f" > "${f%.b64}"
-done
-```
-
-After unzip you have **absolutely everything** from your original zip: all Java sources (including CyberwareScreen, SandevistanMesh full geometry), blockbench model + preview, all textures, gradle files, DEVLOG, etc.
-
-Repo: https://github.com/pordonbanan-cpu/Cyberpunk
+Until then, keep your original uploaded zip — it is the bit-perfect source of truth.
