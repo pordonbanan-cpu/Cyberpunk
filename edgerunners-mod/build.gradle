@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.78'
+}
+version = '0.3.0'
+group = 'com.edgerunners'
+base { archivesName = 'edgerunners' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = '21.1.172'
+    runs {
+        client { client() }
+        server { server() }
+    }
+    mods { edgerunners { sourceSet sourceSets.main } }
+}
